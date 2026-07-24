@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Level Are You, Really?</title><meta name='description' content='Talk through a subject with an AI tutor for about fifteen minutes; get an honest placement - remedial, standard, honors, AP, or IB - and the exact pack tha'><style>
+:root { --accent:#1a3a5c; --band:#c0392b; --promptbg:#eef4fb; --promptbd:#9dc3e6; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, serif; color:#1a1a2e; max-width:46rem; margin:0 auto;
+       padding:1.5rem 1.2rem 4rem; line-height:1.6; }
+header.site { font-family: Helvetica, Arial, sans-serif; border-bottom:3px solid var(--accent);
+       padding-bottom:.6rem; margin-bottom:1.4rem; }
+header.site a { color:var(--accent); text-decoration:none; font-weight:bold; }
+header.site nav a { margin-right:1rem; font-weight:normal; font-size:.95rem; }
+h1 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); font-size:1.9rem; line-height:1.2; }
+h2 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); margin-top:2rem; }
+h3 { font-family:Helvetica,Arial,sans-serif; color:var(--band); }
+a { color:var(--accent); }
+table { border-collapse:collapse; width:100%; font-size:.95rem; }
+th,td { border:1px solid #ccc; padding:.4rem .6rem; text-align:left; }
+pre { background:var(--promptbg); border:1.5px solid var(--promptbd); border-radius:6px;
+      padding:.9rem; white-space:pre-wrap; word-wrap:break-word; font-size:.85rem; }
+ul.cat { list-style:none; padding:0; } ul.cat li { margin:.35rem 0; }
+.free { color:var(--band); font-weight:bold; font-family:Helvetica,Arial,sans-serif; font-size:.8rem; }
+.copybtn { font-family:Helvetica,Arial,sans-serif; font-size:.85rem; padding:.4rem .8rem;
+      background:var(--accent); color:#fff; border:none; border-radius:5px; cursor:pointer; }
+</style></head><body>
+<header class="site"><a href="../index.html">The 12-Week AI-Tutor Guides</a><br>
+<nav><a href="../index.html">Catalog</a> <a href="../start-here.html">Never used AI? Start here</a>
+<a href="../index.html#diagnostics">Free diagnostics</a></nav></header>
+<h1>What Level Are You, Really?</h1>
+<p><em>Talk through a subject with an AI tutor for about fifteen minutes; get an honest placement - remedial, standard, honors, AP, or IB - and the exact pack that fits, with the route to the next level up.</em></p>
+<p>The "match your level" front door. Instead of a parent guessing whether a student belongs in
+remedial, standard, honors, AP, or IB, the learner has a short adaptive conversation with the tutor
+about a chosen subject. The tutor probes two things at once - current mastery AND learning appetite
+(pace, independence, hunger for depth) - because level is not only "how much do you know" but "how
+fast and how independently can you go." It scores each dimension 0-100, then RECOMMENDS a level and
+the exact pack(s) to use, always naming the route to the next level up. This routes ACROSS the
+catalog's levels; the subject-specific diagnostics (math-placement, etc.) then tune the weeks WITHIN
+the chosen level. See specs/levels.md.</p>
+<h2>Run it now — free</h2>
+<p>Copy the prompt below into a fresh chat with any AI assistant
+(<a href="../start-here.html">never used one? start here</a>), then answer its questions honestly.
+It scores you out of 100 and builds your plan at the end.</p>
+<button class="copybtn" id="cbtn" onclick="copyProto()">Copy the prompt</button>
+<pre id="proto">You are a warm, honest placement tutor. Your job is to recommend the right RIGOR LEVEL for this
+student in one subject - not to teach, not to flatter, not to push them higher (or lower) than the
+evidence supports. Run an adaptive interview, ~12-18 minutes:
+1. First ask two setup questions: (a) which subject are we placing (math, science, reading/writing,
+   history, a language, etc.), and (b) the learner&#x27;s country/region and current grade/year - so you
+   map to the right system (US honors/AP, UK tiers/A-Levels, IB SL/HL, or a national-exam stream).
+2. Explain the format in one line: &quot;I&#x27;ll ask you to work through a few things out loud and talk me
+   through your thinking - I&#x27;m figuring out the level that will fit you, not testing you to pass.&quot;
+3. Start at roughly on-grade difficulty for the stated subject and grade. If the learner handles it
+   easily and wants more, escalate toward honors/AP/IB-style demands: multi-step problems, &quot;explain
+   WHY,&quot; synthesis across ideas, an open-ended prompt with no single right answer, and how they
+   handle being stuck. If they struggle, step down until you find where it holds - that floor is the
+   remedial/standard signal.
+4. Probe learning APPETITE deliberately, not just correctness: Do they push for the deeper &quot;why&quot; or
+   want the quick answer? Do they stay with a hard problem or disengage? Would they enjoy a 4,000-word
+   independent essay (IB EE) or an original research project (honors), or is that a groan? Level is
+   mastery AND appetite together - a bright student with no appetite for independent work is standard,
+   not honors, and that&#x27;s an honest, useful call.
+5. Do NOT teach or correct mid-interview beyond keeping the conversation moving. If the learner can&#x27;t
+   do something, that&#x27;s data. Note specific evidence for every judgment.
+6. When you have enough signal on all four dimensions (usually 8-14 exchanges), stop and produce the
+   report and the routing recommendation. Do not keep going to be thorough.</pre>
+<p>When you have your score: <a href="../packs/router - recommends a level + the matching pack, does not tune one pack's weeks.html">the 12-week plan this diagnostic tunes</a>.</p>
+<h3>The honest fine print</h3>
+<p>Honest, evidence-based placement - no flattery, no pushing a student up or down to please anyone,
+no leading them to an answer. This is a learning and placement tool, NOT a school-recognized
+tracking or credentialing decision (say so plainly); a real course placement is the school's call.
+Placement is never a ceiling: every remedial or standard result names the concrete route to the next
+level. Non-financial: no financial, medical, or legal advice, even if a subject example mentions
+money. If used for a child, an adult runs the session and sees the full report; there is no child
+account, login, or data collection anywhere in this flow. Not affiliated with the College Board, the
+IB Organization, or any school or exam body; verify current official requirements with the learner's
+own school or exam coordinator. Encouraging about the PATH (every level has a route up); honest and
+unflinching about the current level.</p>
+<script>
+function copyProto(){const t=document.getElementById('proto').innerText;
+navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('cbtn');
+b.innerText='Copied - now paste it into your AI chat';setTimeout(()=>b.innerText='Copy the prompt',2500);});}
+</script></body></html>

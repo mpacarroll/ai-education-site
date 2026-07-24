@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Good Is Your Chess?</title><meta name='description' content='Work through real positions with an AI tutor for about fifteen minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.'><style>
+:root { --accent:#1a3a5c; --band:#c0392b; --promptbg:#eef4fb; --promptbd:#9dc3e6; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, serif; color:#1a1a2e; max-width:46rem; margin:0 auto;
+       padding:1.5rem 1.2rem 4rem; line-height:1.6; }
+header.site { font-family: Helvetica, Arial, sans-serif; border-bottom:3px solid var(--accent);
+       padding-bottom:.6rem; margin-bottom:1.4rem; }
+header.site a { color:var(--accent); text-decoration:none; font-weight:bold; }
+header.site nav a { margin-right:1rem; font-weight:normal; font-size:.95rem; }
+h1 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); font-size:1.9rem; line-height:1.2; }
+h2 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); margin-top:2rem; }
+h3 { font-family:Helvetica,Arial,sans-serif; color:var(--band); }
+a { color:var(--accent); }
+table { border-collapse:collapse; width:100%; font-size:.95rem; }
+th,td { border:1px solid #ccc; padding:.4rem .6rem; text-align:left; }
+pre { background:var(--promptbg); border:1.5px solid var(--promptbd); border-radius:6px;
+      padding:.9rem; white-space:pre-wrap; word-wrap:break-word; font-size:.85rem; }
+ul.cat { list-style:none; padding:0; } ul.cat li { margin:.35rem 0; }
+.free { color:var(--band); font-weight:bold; font-family:Helvetica,Arial,sans-serif; font-size:.8rem; }
+.copybtn { font-family:Helvetica,Arial,sans-serif; font-size:.85rem; padding:.4rem .8rem;
+      background:var(--accent); color:#fff; border:none; border-radius:5px; cursor:pointer; }
+</style></head><body>
+<header class="site"><a href="../index.html">The 12-Week AI-Tutor Guides</a><br>
+<nav><a href="../index.html">Catalog</a> <a href="../start-here.html">Never used AI? Start here</a>
+<a href="../index.html#diagnostics">Free diagnostics</a></nav></header>
+<h1>How Good Is Your Chess?</h1>
+<p><em>Work through real positions with an AI tutor for about fifteen minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.</em></p>
+<p>A performance-based placement diagnostic. Instead of a puzzle quiz with a right/wrong answer key,
+the learner is shown real positions and reasons out loud about moves, threats, and plans while the
+AI tutor listens. The tutor probes across the real dimensions of playing chess well, scores each
+0-100 with evidence from what was actually said and played, and then tunes the 12 weeks of "Learn
+Chess Properly" to the learner's true level - compressing what they already own, expanding what
+they don't. Re-take it at the end of the pack to see the delta.
+This is the standalone, sellable front door to the chess track and a template for the Wave 2
+tutor's placement engine (see specs/adaptive-diagnostic.md).</p>
+<h2>Run it now — free</h2>
+<p>Copy the prompt below into a fresh chat with any AI assistant
+(<a href="../start-here.html">never used one? start here</a>), then answer its questions honestly.
+It scores you out of 100 and builds your plan at the end.</p>
+<button class="copybtn" id="cbtn" onclick="copyProto()">Copy the prompt</button>
+<pre id="proto">You are a warm, honest chess placement tutor. Your job is to find out how well the learner
+actually understands and plays chess - not to teach yet, and never to flatter or lead them to the
+answer. Run an adaptive interview built around real positions, ~10-20 minutes:
+1. Ask a couple of quick context questions (roughly how long they&#x27;ve played, whether they&#x27;ve had
+   any coaching or just played casually), then present a first, simple middlegame position and ask
+   them to think aloud: what do they notice, what would they play, and why.
+2. Start with positions any improving player should handle. If they reason well, escalate: a
+   sharper tactical position, a position needing a multi-move plan rather than a single move, a
+   simplified endgame. If they struggle or guess, step back down to something more basic. Always
+   find both the floor (what breaks them) and the ceiling (the hardest thing they can genuinely
+   do).
+3. Probe each scored dimension deliberately using fresh positions, not memorized theory (below).
+   Ask &quot;why&quot; after every suggested move. Note specific evidence: which threats they saw and
+   missed, whether they checked the opponent&#x27;s reply, whether they could name a plan or only
+   described the position, and whether they executed or fumbled the endgame technique you showed
+   them.
+4. Score understanding, not just whether they land on the &quot;correct&quot; move. A learner who finds the
+   right move by luck but can&#x27;t explain it scores lower than one who reasons soundly to a
+   slightly worse move. Do NOT correct, teach, or reveal the best move mid-interview beyond what&#x27;s
+   needed to move to the next position; this is assessment, not a lesson. Do not lead the learner
+   to answers. Do not inflate a score to be encouraging.
+5. When you have enough signal (high confidence across all five dimensions, not exhaustion), stop
+   and produce the report.</pre>
+<p>When you have your score: <a href="../packs/chess-fundamentals-12wk.html">the 12-week plan this diagnostic tunes</a>.</p>
+<h3>The honest fine print</h3>
+<p>Honest, evidence-based scoring - no flattery, no grade inflation, no leading the learner toward
+the best move during assessment. This is NOT a certified rating (it does not produce or map to an
+Elo/FIDE/USCF rating; say so plainly). Non-financial. If used for a child, an adult runs the
+session and sees the results; no child account or data is collected. Encouraging in tone about the
+PATH forward, honest about the CURRENT level - a low score is reported plainly, not softened.</p>
+<script>
+function copyProto(){const t=document.getElementById('proto').innerText;
+navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('cbtn');
+b.innerText='Copied - now paste it into your AI chat';setTimeout(()=>b.innerText='Copy the prompt',2500);});}
+</script></body></html>

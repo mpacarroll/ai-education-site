@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where&#x27;s Your SAT?</title><meta name='description' content='Work with an AI tutor for about 15 minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.'><style>
+:root { --accent:#1a3a5c; --band:#c0392b; --promptbg:#eef4fb; --promptbd:#9dc3e6; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, serif; color:#1a1a2e; max-width:46rem; margin:0 auto;
+       padding:1.5rem 1.2rem 4rem; line-height:1.6; }
+header.site { font-family: Helvetica, Arial, sans-serif; border-bottom:3px solid var(--accent);
+       padding-bottom:.6rem; margin-bottom:1.4rem; }
+header.site a { color:var(--accent); text-decoration:none; font-weight:bold; }
+header.site nav a { margin-right:1rem; font-weight:normal; font-size:.95rem; }
+h1 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); font-size:1.9rem; line-height:1.2; }
+h2 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); margin-top:2rem; }
+h3 { font-family:Helvetica,Arial,sans-serif; color:var(--band); }
+a { color:var(--accent); }
+table { border-collapse:collapse; width:100%; font-size:.95rem; }
+th,td { border:1px solid #ccc; padding:.4rem .6rem; text-align:left; }
+pre { background:var(--promptbg); border:1.5px solid var(--promptbd); border-radius:6px;
+      padding:.9rem; white-space:pre-wrap; word-wrap:break-word; font-size:.85rem; }
+ul.cat { list-style:none; padding:0; } ul.cat li { margin:.35rem 0; }
+.free { color:var(--band); font-weight:bold; font-family:Helvetica,Arial,sans-serif; font-size:.8rem; }
+.copybtn { font-family:Helvetica,Arial,sans-serif; font-size:.85rem; padding:.4rem .8rem;
+      background:var(--accent); color:#fff; border:none; border-radius:5px; cursor:pointer; }
+</style></head><body>
+<header class="site"><a href="../index.html">The 12-Week AI-Tutor Guides</a><br>
+<nav><a href="../index.html">Catalog</a> <a href="../start-here.html">Never used AI? Start here</a>
+<a href="../index.html#diagnostics">Free diagnostics</a></nav></header>
+<h1>Where&#x27;s Your SAT?</h1>
+<p><em>Work with an AI tutor for about 15 minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.</em></p>
+<p>A conversational SAT placement diagnostic. Instead of a full practice test, the learner works a
+short adaptive mix of SAT-style Reading &amp; Writing and Math questions with the AI tutor, talking
+through their reasoning out loud. The tutor probes across the real dimensions of SAT readiness,
+scores each 0-100 with evidence from the session, and tunes the 12 weeks of the "Ace the SAT"
+pack to the learner's actual gaps - skipping what's solid, front-loading what's shaky, expanding
+what's missing. Re-take it after week 9 or 12 to see the delta. This is the standalone, sellable
+front door to the SAT track and a template for the Wave 2 tutor's placement engine (see
+specs/adaptive-diagnostic.md).</p>
+<h2>Run it now — free</h2>
+<p>Copy the prompt below into a fresh chat with any AI assistant
+(<a href="../start-here.html">never used one? start here</a>), then answer its questions honestly.
+It scores you out of 100 and builds your plan at the end.</p>
+<button class="copybtn" id="cbtn" onclick="copyProto()">Copy the prompt</button>
+<pre id="proto">You are a warm, honest SAT placement tutor. Your job is to find out what the learner can actually
+DO on SAT-style Reading &amp; Writing and Math questions right now - not to teach yet, and never to
+flatter or lead them to the answer. Run an adaptive interview, ~15 minutes:
+1. Explain the format in one line: a short adaptive mix of SAT-style questions across reading,
+   grammar, and math; think out loud, no penalty for wrong answers, this just builds an honest
+   map.
+2. Start each area (reading, writing/grammar, algebra, advanced math/data, pacing awareness) with
+   a medium-difficulty item. If they nail it and explain the reasoning cleanly, escalate to a
+   harder or trickier one (a tempting trap answer, a two-step algebra setup, a dense passage). If
+   they struggle or guess, step back down to find the floor. Always find both the floor and the
+   ceiling per dimension - don&#x27;t stop at the first miss or the first win.
+3. After every answer, ask them to explain their reasoning or show their work before you move on
+   - the reasoning is the real signal, not just right/wrong. Note specific evidence: which
+   question types they solved cleanly, which they got right for the wrong reason, which errors
+   were content gaps vs. careless slips vs. running out of strategy.
+4. Probe pacing/test strategy explicitly at least once: ask how long they&#x27;d expect to spend on a
+   given question type and whether they have a guessing/skip strategy - this is a real scored
+   dimension, not small talk.
+5. Do NOT teach, correct the underlying rule, or reveal the right answer mid-interview beyond
+   what&#x27;s needed to keep the conversation moving; this is assessment, not tutoring. Do not lead.
+   If they can&#x27;t do something, that&#x27;s data, not a problem to fix right now.
+6. When you have enough signal on all five dimensions (high confidence, not exhaustion - usually
+   8-14 questions total), stop and produce the report.</pre>
+<p>When you have your score: <a href="../packs/sat-prep-12wk.html">the 12-week plan this diagnostic tunes</a>.</p>
+<h3>The honest fine print</h3>
+<p>Honest, evidence-based scoring - no flattery, no grade inflation, no leading the learner toward a
+correct answer or telling them a rule before they've tried. This is NOT the SAT, not affiliated
+with, endorsed by, or connected to the College Board or any other test maker, contains no official
+or leaked test content, and is not a certified or predictive score - it is a learning-readiness
+estimate only, with no guarantee of any real SAT score, band, or outcome. Non-financial. If used
+by a minor, an adult runs and views the session; no child account or child data is collected or
+stored. Encouraging in tone about the PATH forward, honest about the CURRENT level - a low score
+is a starting line, not a verdict.</p>
+<script>
+function copyProto(){const t=document.getElementById('proto').innerText;
+navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('cbtn');
+b.innerText='Copied - now paste it into your AI chat';setTimeout(()=>b.innerText='Copy the prompt',2500);});}
+</script></body></html>

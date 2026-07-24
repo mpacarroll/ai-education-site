@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where&#x27;s Your Code?</title><meta name='description' content='Work through code with an AI tutor for about fifteen minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.'><style>
+:root { --accent:#1a3a5c; --band:#c0392b; --promptbg:#eef4fb; --promptbd:#9dc3e6; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, serif; color:#1a1a2e; max-width:46rem; margin:0 auto;
+       padding:1.5rem 1.2rem 4rem; line-height:1.6; }
+header.site { font-family: Helvetica, Arial, sans-serif; border-bottom:3px solid var(--accent);
+       padding-bottom:.6rem; margin-bottom:1.4rem; }
+header.site a { color:var(--accent); text-decoration:none; font-weight:bold; }
+header.site nav a { margin-right:1rem; font-weight:normal; font-size:.95rem; }
+h1 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); font-size:1.9rem; line-height:1.2; }
+h2 { font-family:Helvetica,Arial,sans-serif; color:var(--accent); margin-top:2rem; }
+h3 { font-family:Helvetica,Arial,sans-serif; color:var(--band); }
+a { color:var(--accent); }
+table { border-collapse:collapse; width:100%; font-size:.95rem; }
+th,td { border:1px solid #ccc; padding:.4rem .6rem; text-align:left; }
+pre { background:var(--promptbg); border:1.5px solid var(--promptbd); border-radius:6px;
+      padding:.9rem; white-space:pre-wrap; word-wrap:break-word; font-size:.85rem; }
+ul.cat { list-style:none; padding:0; } ul.cat li { margin:.35rem 0; }
+.free { color:var(--band); font-weight:bold; font-family:Helvetica,Arial,sans-serif; font-size:.8rem; }
+.copybtn { font-family:Helvetica,Arial,sans-serif; font-size:.85rem; padding:.4rem .8rem;
+      background:var(--accent); color:#fff; border:none; border-radius:5px; cursor:pointer; }
+</style></head><body>
+<header class="site"><a href="../index.html">The 12-Week AI-Tutor Guides</a><br>
+<nav><a href="../index.html">Catalog</a> <a href="../start-here.html">Never used AI? Start here</a>
+<a href="../index.html#diagnostics">Free diagnostics</a></nav></header>
+<h1>Where&#x27;s Your Code?</h1>
+<p><em>Work through code with an AI tutor for about fifteen minutes; get an honest score out of 100 and a 12-week course tuned to exactly your gaps.</em></p>
+<p>A performance-based placement diagnostic for programming. Instead of a multiple-choice quiz, the
+learner reads and traces short code snippets, reasons out loud about what they'd write or fix,
+and describes how they'd approach small problems - in whatever language they already know a bit
+of, or pseudocode if they know none. The tutor probes across the real dimensions of writing and
+reading code, scores each 0-100 with evidence from what the learner actually did, and tunes the
+12 weeks of the "Code From Scratch" pack to their actual level - skipping what they own,
+expanding what they don't. This is the standalone, sellable front door to the programming track
+and a template for the Wave 2 tutor's placement engine (see specs/adaptive-diagnostic.md).</p>
+<h2>Run it now — free</h2>
+<p>Copy the prompt below into a fresh chat with any AI assistant
+(<a href="../start-here.html">never used one? start here</a>), then answer its questions honestly.
+It scores you out of 100 and builds your plan at the end.</p>
+<button class="copybtn" id="cbtn" onclick="copyProto()">Copy the prompt</button>
+<pre id="proto">You are a warm, honest programming-placement tutor. Your job is to find out what the learner can
+actually READ, TRACE, and WRITE - not to teach yet, and never to flatter.
+Run an adaptive interview, ~10-20 minutes:
+1. Ask what language(s) they&#x27;ve touched, if any (including &quot;none&quot;). Say up front this is a
+   placement check, not a test they can fail, and that &quot;I don&#x27;t know&quot; is a fine, useful answer.
+2. Start easy: a 3-4 line snippet with a variable and a print/output - ask what it outputs and
+   why. If they handle it, escalate: a snippet with an if/else to trace, a loop to trace and
+   count iterations of, a small function to read and explain, a snippet with a bug to find and
+   fix, a short prompt to break into steps before any code is written, a documentation excerpt
+   for an unfamiliar function to interpret. If they struggle, step back down (simpler snippet,
+   ask them to just predict true/false or count) until you find the ceiling. Always find both
+   the floor and the ceiling - do not stop at the first stumble, and do not stop at the first
+   success.
+3. Probe each scored dimension deliberately (below). Note specific evidence - which snippets they
+   traced correctly, where their trace diverged from actual execution, whether they read an error
+   message top-to-bottom or bottom-up, whether they could decompose a problem before coding, and
+   whether they could make sense of an unfamiliar function&#x27;s docs.
+4. Do NOT teach, correct style, or explain the &quot;right&quot; way mid-interview beyond what&#x27;s needed to
+   keep the conversation moving; this is assessment, not a lesson. Do not lead the learner to the
+   answer or hint at the trace. Do not inflate a guess into a &quot;got it.&quot; If they can&#x27;t do
+   something, that is data, not a failure to be softened.
+5. When you have enough signal (high confidence in floor and ceiling for every dimension, not
+   exhaustion), stop and produce the report.</pre>
+<p>When you have your score: <a href="../packs/programming-adult-12wk.html">the 12-week plan this diagnostic tunes</a>.</p>
+<h3>The honest fine print</h3>
+<p>Honest, evidence-based scoring - no flattery, no grade inflation, no leading the learner to the
+correct trace or fix. Not a certified programming exam or hiring assessment (say so plainly; it
+is a placement tool for this course, not a CS credential or technical-interview substitute).
+Non-financial. If used for a child, an adult runs it and sees the results; no child account or
+child data is collected or stored. Encouraging in tone about the PATH forward (what to focus on
+and why), honest and specific about the CURRENT level (no softening a real gap into "you're
+close").</p>
+<script>
+function copyProto(){const t=document.getElementById('proto').innerText;
+navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('cbtn');
+b.innerText='Copied - now paste it into your AI chat';setTimeout(()=>b.innerText='Copy the prompt',2500);});}
+</script></body></html>
