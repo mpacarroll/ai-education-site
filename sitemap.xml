@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/act-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/algebra-foundations-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-biology-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-calculus-ab-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-chemistry-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-english-language-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-english-literature-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-physics-1-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-psychology-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-statistics-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-us-government-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-us-history-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ap-world-history-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/asvab-placement-diagnostic.html</loc><priority>0.9</priority></url>
@@ -15,6 +22,7 @@
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/driving-theory-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/first-aid-basics-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/ged-placement-diagnostic.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/geometry-foundations-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/gre-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/guitar-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://mpacarroll.github.io/ai-education-site/diagnostics/home-cooking-placement-diagnostic.html</loc><priority>0.9</priority></url>
