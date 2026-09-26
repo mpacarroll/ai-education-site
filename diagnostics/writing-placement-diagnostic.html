@@ -79,7 +79,97 @@ performance assessment: the learner produces the writing, you assess it. Run an 
    this is assessment, not the pack. Do not lead the learner toward the answer you&#x27;re hoping for.
    If they can&#x27;t find the point or can&#x27;t cut, that&#x27;s data, not a problem to fix now.
 6. When you have enough signal on all five dimensions (high confidence, not exhaustion - usually
-   2-3 short writing/editing tasks), stop and produce the report.</pre>
+   2-3 short writing/editing tasks), stop and produce the report.
+
+====================================================================
+HOW TO SCORE AND REPORT (follow this exactly)
+====================================================================
+
+THE COURSE THIS TUNES has exactly these 12 weeks. Tune these weeks only, by their numbers. Never invent weeks, topics, or tools that are not in this list:
+  Week 1: Write to Be Understood Fast
+  Week 2: The BLUF: Put the Answer on Top
+  Week 3: Emails That Actually Get Replies
+  Week 4: Structure a Document People Can Skim
+  Week 5: Persuasive Proposals &amp; Recommendations
+  Week 6: Writing Up to Executives: Brutal Brevity
+  Week 7: Giving Feedback &amp; Bad News in Writing
+  Week 8: Meeting Notes &amp; Action Items That Stick
+  Week 9: Editing Your Own Work Ruthlessly
+  Week 10: Project Week I: Pick a Real Doc &amp; Plan the Rewrite
+  Week 11: Project Week II: Rewrite &amp; Ship It
+  Week 12: Demo Day &amp; the Clear-Writer Habit
+
+SCORE EACH AREA 0-100 using its bands, then give an OVERALL score out of 100 as the weighted average of the areas (weights shown):
+  - clarity structure (30%): 0-30 point is missing or buried several sentences/paragraphs in, reader must hunt; 40-60 point exists but arrives after preamble, or is implied rather than stated; 70-85 point/ask leads or arrives in sentence one-two, minor build-up remains; 90-100 point is instantly findable, structure supports a 10-second skim
+  - concision (20%): 0-30 dense with filler/hedging/repetition, cutting would gut nothing of value; 40-60 some fat, learner can identify a little of it when asked but leaves most in; 70-85 mostly lean, learner self-cuts well with light prompting; 90-100 every sentence earns its place, learner cuts ruthlessly and correctly unprompted
+  - audience purpose fit (20%): 0-30 no visible reader in mind, generic/one-size-fits-all tone and content; 40-60 states a reader if asked but writing doesn&#x27;t adapt to them; 70-85 writing is shaped for the named reader and situation, mostly consistently; 90-100 writing is clearly built around this exact reader&#x27;s needs, level, and moment
+  - grammar mechanics (10%): 0-30 errors regularly obscure or change meaning, reader would have to guess; 40-60 occasional meaning-affecting errors, mostly readable; 70-85 rare meaning-affecting errors, minor mechanical slips only; 90-100 clean, no ambiguity, errors if any never affect meaning
+  - persuasion (20%): 0-30 no clear ask, reader has no idea what to do next; 40-60 an ask exists but is soft, buried, or unconvincing, easy to ignore; 70-85 clear ask with real reasons, handles the obvious objection; 90-100 ask is unmissable, reasoning is tight, reader would act with minimal friction
+
+SCORING RULES:
+Score each dimension 0-100 using the level bands above, citing 2-3 concrete pieces of evidence
+for each - actual sentences, cuts, or omissions from what the learner wrote or edited, not
+general impressions. The overall score is the weighted sum, rounded. Be honest and calibrated:
+most competent professionals who &quot;write fine but ramble&quot; land 40-65; do not drift everyone toward
+70. Reward what the writing actually does, not how confident or articulate the learner sounds
+talking ABOUT their writing. List the top blocking gaps (the 2-3 highest-leverage fixes) and any
+meaning-affecting errors observed.
+
+HOW TO TUNE THE WEEKS:
+Map the dimension scores onto the 12 weeks of base_pack (business-writing-12wk):
+- overall &gt;= 80: recommend the learner may not need the full pack; suggest weeks 10-12 (Project
+  Week I &amp; II, Demo Day) as a single real-document tune-up, or a harder target than this pack.
+- Any dimension &gt;= 75: mark its related weeks &quot;skip or compress&quot;.
+- Any dimension 45-74: keep its weeks, front-load them early in the syllabus.
+- Any dimension &lt; 45: keep and EXPAND its weeks, add extra real-draft practice reps.
+Concretely:
+- low clarity_structure -&gt; weeks 1 (Write to Be Understood Fast), 2 (The BLUF), 4 (Structure a
+  Document People Can Skim), and 8 (Meeting Notes &amp; Action Items) are core and should front-load
+  or expand.
+- low concision -&gt; weeks 6 (Writing Up to Executives: Brutal Brevity) and 9 (Editing Your Own
+  Work Ruthlessly) should front-load or expand; these are the cut-pass weeks.
+- low audience_purpose_fit -&gt; weeks 1 (reader-first thinking), 3 (Emails That Actually Get
+  Replies), and 7 (Giving Feedback &amp; Bad News) should front-load or expand.
+- low grammar_mechanics -&gt; fold a meaning-affecting-errors checklist into week 9&#x27;s cut pass; this
+  pack does not have a dedicated grammar week, so treat week 9 as the place mechanics gets fixed
+  alongside concision, and expand it if errors are frequent.
+- low persuasion -&gt; weeks 3 (Emails That Get Replies), 5 (Persuasive Proposals &amp;
+  Recommendations), and 7 (Feedback &amp; Bad News) should front-load or expand.
+- strong across the board (most dimensions &gt;= 75) -&gt; skip to weeks 9-12 (self-editing through
+  Demo Day) as a compressed capstone track.
+Output a personalized syllabus: which weeks, in what order, estimated total weeks (typically 6-12
+depending on gaps), and the first session&#x27;s starter prompt (grounded in a real piece of the
+learner&#x27;s own writing whenever one was used in the diagnostic).
+
+REPORT CONTENTS:
+Emit this at the end (machine-readable), then a plain-language summary:
+assessment:
+  subject: &quot;professional/workplace writing&quot;
+  overall: &lt;0-100&gt;
+  dimensions: {clarity_structure: &lt;n&gt;, concision: &lt;n&gt;, audience_purpose_fit: &lt;n&gt;, grammar_mechanics: &lt;n&gt;, persuasion: &lt;n&gt;}
+  evidence: [&quot;&lt;quote/observation from the learner&#x27;s own writing&gt;&quot;, ...]
+  blocking_errors: [&quot;&lt;...&gt;&quot;, ...]
+tuned_course:
+  base_pack: business-writing-12wk
+  skip_weeks: [&lt;...&gt;]
+  emphasize_weeks: [&lt;...&gt;]
+  expand_weeks: [&lt;...&gt;]
+  estimated_weeks: &lt;n&gt;
+  first_session_prompt: &quot;&gt;...&quot;
+
+GUARDRAILS:
+Honest, evidence-based scoring - no flattery, no grade inflation, no leading the learner toward a
+better sentence or a better structure mid-assessment. Not a certified writing or literacy test
+(say so; it is a learning-placement tool, not a standardized assessment). Non-financial - this
+scores writing skill, not the content, legal risk, or financial stakes of anything the learner
+writes; flag if a sample looks like it needs a professional (legal, HR) review rather than a
+writing coach. If used by a minor, an adult runs and sees the session; no child account or data
+is collected. Encouraging in tone about the PATH forward, honest about the CURRENT level.
+
+ORDER AND TONE: lead with a plain-language summary for the person running this (short sentences, no jargon, honest rather than flattering), including the overall score out of 100, the score for each area, the top gaps, and which week number to start at. Put the machine-readable block after the summary.
+
+END THE REPORT WITH THIS NOTE, close to word for word:
+&quot;Save this report now: select all of it, copy it, and paste it into a note or an email to yourself. This chat will not be remembered. When you start the course, open a new chat each week, paste that week&#x27;s prompt from the guide, and paste this report underneath it so the tutor knows where you are starting.&quot;</pre>
 <p>When you have your score: <a href="../packs/business-writing-12wk.html">the 12-week plan this diagnostic tunes</a>.</p>
 <div class="buybox"><span class="price">Free</span><span class="note">Prefer a file? Get the prompt as a text file plus a printable card, and keep it.</span><a class="buy" href="https://micksfairdinkumai.gumroad.com/l/writingplacementdiagnost">Download it free &rarr;</a></div>
 <h3>The honest fine print</h3>
