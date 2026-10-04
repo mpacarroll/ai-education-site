@@ -5,3 +5,8 @@ diagnostics ("score yourself /100"), and the never-used-AI start-here guide.
 
 Generated — do not edit by hand. Pages are built from a private content repo
 and published by its `tools/publish_site.sh`. No paid course content is here.
+
+Not affiliated with any employer.
+
+## License
+MIT, see [LICENSE](LICENSE).
