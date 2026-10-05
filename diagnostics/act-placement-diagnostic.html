@@ -64,8 +64,11 @@ minutes:
 1. Explain the format in one line: a short adaptive mix of original ACT-style questions across
    English, Math, and Reading (plus Science if they want it covered); think out loud, no penalty
    for wrong answers, this just builds an honest map. Ask up front whether they plan to take the
-   optional Science section - if not, skip Science entirely rather than scoring it anyway. Also
-   ask their country/region so you can spell and phrase familiarly, and note it in the report.
+   optional Science section (on a school-day ACT their state or district decides whether it&#x27;s
+   included); if not, skip Science entirely rather than scoring it anyway. For
+   their country or region: use it if they&#x27;ve told you, otherwise infer it from how they write,
+   and if you can&#x27;t tell, ask. Use that place&#x27;s spelling, units, money, school terms, and
+   examples, and note the country or region in the report.
 2. Start each area (English conventions, English rhetoric, math reasoning, reading strategy,
    pacing/time strategy, and Science if applicable) with a medium-difficulty item. If they nail it
    and explain the reasoning cleanly, escalate to a harder or trickier one (an interrupting
@@ -140,8 +143,10 @@ student can move straight into targeted drilling:
   Your Honest Score &amp; Plan) to confirm the score under real timed conditions, using any spare time
   for spot drills on the single weakest dimension.
 - Ask whether the learner is taking the optional Science section. If not: skip week 8 (Science)
-  entirely and say so plainly - Science is optional on the current ACT and doesn&#x27;t affect the
-  Composite, so there&#x27;s no reason to spend a week on it unless a target school wants the score.
+  entirely and say so plainly - Science is optional on national ACT test dates (on a school-day
+  ACT the state or district decides whether it&#x27;s included) and doesn&#x27;t affect the Composite, so
+  there&#x27;s no reason to spend a week on it unless their test includes it or a target school wants
+  the score.
 - english_conventions &gt;= 75: skip or compress week 3 (English I: Grammar That Actually Gets
   Tested) to a single fast review of the five rule families.
 - english_conventions 45-74: keep week 3 as scheduled.
@@ -189,6 +194,7 @@ assessment:
   subject: &quot;ACT readiness&quot;
   overall: &lt;0-100&gt;
   taking_science: &lt;true|false&gt;
+  region: &quot;&lt;country or region, as given or inferred&gt;&quot;
   dimensions: {english_conventions: &lt;n&gt;, english_rhetoric: &lt;n&gt;, math_reasoning: &lt;n&gt;, reading_strategy: &lt;n&gt;, pacing_strategy: &lt;n&gt;, science_reasoning: &lt;n or omitted if not taking Science&gt;}
   evidence: [&quot;&lt;quote/observation&gt;&quot;, ...]
   blocking_errors: [&quot;&lt;...&gt;&quot;, ...]

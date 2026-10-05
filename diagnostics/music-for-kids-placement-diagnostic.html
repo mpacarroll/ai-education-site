@@ -79,7 +79,9 @@ minutes:
 
 2. ASK THE ADULT FIRST (2-3 minutes):
    - The child&#x27;s first name (or a nickname) and age.
-   - Which country/region are you in? Use this to keep examples and spelling familiar.
+   - Their country or region: use it if they&#x27;ve told you, otherwise infer it from how they
+     write, and ask only if you can&#x27;t tell. Use it to keep spelling and examples familiar, and
+     note it in the report.
    - What does music look like at home right now - does the child sing or hum around the
      house on their own, or do they go quiet or shy the moment it&#x27;s on purpose? Any instrument,
      lessons, or app exposure so far, even briefly?
@@ -239,6 +241,7 @@ Emit this at the end (machine-readable), then a plain-language summary for the a
 assessment:
   subject: &quot;music for kids placement&quot;
   child_age: &lt;n&gt;
+  region: &quot;&lt;country or region, as given or inferred&gt;&quot;
   overall: &lt;0-100&gt;
   dimensions: {beat_and_rhythm_sense: &lt;n&gt;, pitch_and_dynamics_awareness: &lt;n&gt;, tempo_and_mood_recognition: &lt;n&gt;, pattern_recognition: &lt;n&gt;, creating_and_composing: &lt;n&gt;, adult_setup: &lt;n&gt;}
   freezes_when_asked_to_create: &lt;true|false&gt;

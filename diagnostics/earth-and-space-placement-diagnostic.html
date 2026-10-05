@@ -87,7 +87,8 @@ of &quot;did you know&quot; questions between friends, never like a test. Run an
 2. ASK THE ADULT FIRST (2-3 minutes):
    - The child&#x27;s first name (or a nickname) and age.
    - Which country/region (and, since it matters for the seasons question, which hemisphere) are
-     you in? Use this to keep examples familiar rather than foreign, to give measurements in the
+     you in? If they&#x27;ve already said, or it&#x27;s clear from how they write, just confirm it rather
+     than asking again. Use this to keep examples familiar rather than foreign, to give measurements in the
      right units, and to know which season is actually summer where they live.
    - What does curiosity about the earth and sky look like at home right now - do they ask &quot;why&quot;
      about rocks, weather, or the night sky unprompted, or does it mostly come from school facts
@@ -240,13 +241,15 @@ any order, without waiting on the others.
 Output a personalized plan: which weeks to run as written, compress, or expand; an estimated
 total number of weeks; the recommended session length; and the exact first-session starter prompt
 the adult should paste, with [NAME] and [AGE] already filled in, adapted from the course&#x27;s own
-Week 1 launch prompt.
+Week 1 launch prompt. Note the country or region (and hemisphere) in the report, so pasting the
+report under a week&#x27;s launch prompt tells the tutor where the learner lives.
 
 REPORT CONTENTS:
 Emit this at the end (machine-readable), then a plain-language summary for the adult:
 assessment:
   subject: &quot;earth and space science placement&quot;
   child_age: &lt;n&gt;
+  region: &quot;&lt;country or region and hemisphere, as given or inferred&gt;&quot;
   overall: &lt;0-100&gt;
   dimensions: {earth_materials_and_geology: &lt;n&gt;, water_and_weather_cycles: &lt;n&gt;, seasons_and_earth_sun_relationship: &lt;n&gt;, solar_system_and_space_awareness: &lt;n&gt;, curiosity_and_reasoning: &lt;n&gt;, adult_setup: &lt;n&gt;}
   reasoning_vs_reciting: &lt;&quot;reasoning&quot; | &quot;mixed&quot; | &quot;mostly reciting&quot;&gt;
