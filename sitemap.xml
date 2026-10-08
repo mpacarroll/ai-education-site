@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://homeschoolaitutor.com/ages/11-13.html</loc><priority>0.7</priority></url>
+  <url><loc>https://homeschoolaitutor.com/ages/14-18.html</loc><priority>0.7</priority></url>
+  <url><loc>https://homeschoolaitutor.com/ages/5-7.html</loc><priority>0.7</priority></url>
+  <url><loc>https://homeschoolaitutor.com/ages/8-10.html</loc><priority>0.7</priority></url>
   <url><loc>https://homeschoolaitutor.com/diagnostics/accuplacer-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://homeschoolaitutor.com/diagnostics/act-placement-diagnostic.html</loc><priority>0.9</priority></url>
   <url><loc>https://homeschoolaitutor.com/diagnostics/ai-at-work-placement-diagnostic.html</loc><priority>0.9</priority></url>
@@ -281,5 +285,24 @@
   <url><loc>https://homeschoolaitutor.com/packs/woodworking-12wk.html</loc><priority>0.7</priority></url>
   <url><loc>https://homeschoolaitutor.com/packs/writing-literacy-12wk.html</loc><priority>0.7</priority></url>
   <url><loc>https://homeschoolaitutor.com/packs/young-makers-12wk.html</loc><priority>0.7</priority></url>
+  <url><loc>https://homeschoolaitutor.com/placement-checks.html</loc><priority>0.9</priority></url>
   <url><loc>https://homeschoolaitutor.com/start-here.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/ap-exams.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/arts-and-making.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/coding-and-media.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/college-admissions.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/diplomas-credit-and-life.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/english-exams.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/food-and-drink.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/graduate-school.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/history-and-the-world.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/home-and-hands.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/ideas-and-science.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/math.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/mind-and-body.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/music-and-art.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/people-and-life.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/reading-and-writing.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/science.html</loc><priority>0.9</priority></url>
+  <url><loc>https://homeschoolaitutor.com/subjects/work-and-career.html</loc><priority>0.9</priority></url>
 </urlset>
