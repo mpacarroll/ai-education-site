@@ -143,6 +143,28 @@ a.buy{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:
 .foot h3{font-family:var(--display);color:var(--chalk);font-size:20px;margin:0 0 8px}
 .foot p{margin:0 0 8px}
 .foot a{color:var(--chalk)}
+/* Learn: articles */
+.article{max-width:72ch;margin:0 auto;padding:36px 0 48px}
+.article h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);line-height:1.05;letter-spacing:-.02em;margin:0 0 10px;text-wrap:balance}
+.article .lede{font-size:19px;color:#4A5566;max-width:none;margin:0 0 6px}
+.article .date{font-size:14px;color:#5E675F;margin:0 0 26px}
+.article h2{font-family:var(--display);font-weight:700;font-size:26px;margin:34px 0 10px;line-height:1.15}
+.article h3{font-family:var(--display);font-weight:700;font-size:20px;margin:26px 0 8px}
+.article p,.article li{font-size:17.5px;line-height:1.6}
+.article blockquote{margin:18px 0;padding:14px 18px;background:#F4F1E8;border-left:4px solid var(--pencil);border-radius:4px}
+.article blockquote p{margin:0;font-family:var(--mono);font-size:15px;line-height:1.5;white-space:pre-wrap}
+.article .faq{margin-top:36px;padding-top:8px;border-top:1px solid #DCE2D9}
+.article .faq h2{margin-top:22px}
+.article .faq h3{font-size:19px;margin:20px 0 6px}
+.article .ctabox{margin:40px 0 0;padding:22px 24px;background:var(--board);color:var(--chalk);border-radius:10px}
+.article .ctabox p{margin:0 0 14px;color:#D8DED6}
+.article .ctabox .cta{font-size:18px}
+.related{margin-top:36px}
+.related h2{font-family:var(--display);font-weight:700;font-size:24px;margin:0 0 14px}
+.learn-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:18px}
+.learn-list li{padding:18px 20px;background:#FFF;border:1px solid #DCE2D9;border-radius:10px}
+.learn-list h3{margin:0 0 6px;font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2}
+.learn-list p{margin:0;color:#4A5566;line-height:1.5}
 .foot form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .foot input{flex:1 1 200px;min-width:0;padding:10px 12px;border-radius:5px;border:1px solid #4A6558;background:#1A2F27;color:var(--chalk);font:inherit}
 .foot button{padding:10px 16px;border-radius:5px;border:1px solid var(--chalk);background:none;color:var(--chalk);font:inherit;font-weight:700;cursor:pointer}
@@ -155,8 +177,12 @@ a.buy{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:
   .bgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
 }
+.chat-phone{display:none}
 @media (max-width:520px){
   body{font-size:16px}
+  .scene{min-height:0}
+  .scene .hcover,.scene .page,.scene .chat:not(.chat-phone){display:none}
+  .chat-phone{display:grid;position:static;width:auto;margin-top:6px}
   .nav{gap:14px;font-size:14px}
   .scene{min-height:400px}
   .scene .hcover{width:62%}
