@@ -138,6 +138,18 @@ a.buy{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:
 .copybtn{font-family:var(--display);font-weight:700;font-size:16px;padding:10px 16px;background:var(--pencil);color:var(--pencil-ink);border:0;border-radius:6px;cursor:pointer}
 .related{padding-block:10px 50px;border-top:1px solid var(--line)}
 
+/* parent guides (docs/learn/) */
+.article{padding-top:36px}
+.article h1{font-family:var(--display);color:var(--ink);font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+.article .lede{font-size:19px}
+.byline{font-size:14px;color:var(--muted);margin:0 0 22px}
+.disclose{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:2rem}
+.learn-list{list-style:none;padding:0;margin:18px 0;display:grid;gap:16px}
+.learn-list a{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);text-underline-offset:4px}
+.learn-list p{margin:4px 0 0;color:var(--muted)}
+.learn{padding-block:20px 50px;border-top:1px solid var(--line)}
+.learn .learn-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px}
+
 .foot{background:var(--board);color:#C9D2CB;font-size:15px}
 .foot .wrap{padding-block:34px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:30px}
 .foot h3{font-family:var(--display);color:var(--chalk);font-size:20px;margin:0 0 8px}
@@ -168,4 +180,5 @@ a.buy{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:
   .card h4{font-size:15.5px}
   .card .buy{flex-direction:column;gap:2px}
   .bgrid{grid-template-columns:minmax(0,1fr)}
+  .learn .learn-list{grid-template-columns:minmax(0,1fr)}
 }
