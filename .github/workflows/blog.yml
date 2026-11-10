@@ -1,0 +1,19 @@
+name: blog
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild the blog and run checks
+        run: python3 tests/test_blog.py
+      - name: Generated pages match the builder
+        run: git diff --exit-code
