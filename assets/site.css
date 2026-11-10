@@ -194,4 +194,22 @@ a.buy{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:
   .card h4{font-size:15.5px}
   .card .buy{flex-direction:column;gap:2px}
   .bgrid{grid-template-columns:minmax(0,1fr)}
+  .article{padding-top:28px}
+  .article h1{font-size:clamp(30px,8vw,50px)}
+}
+
+/* Blog articles share the Learn article styles. Tables scroll on a phone. */
+.article a{text-underline-offset:3px}
+.article .table-wrap{overflow-x:auto;margin:1rem 0 1.4rem;-webkit-overflow-scrolling:touch}
+.article table{border-collapse:collapse;width:100%;font-size:15.5px}
+.article th,.article td{border:1px solid var(--line);padding:.45rem .65rem;text-align:left;vertical-align:top}
+.article th{font-family:var(--display);font-weight:700;color:var(--ink);background:var(--sheet)}
+.article .date time{color:inherit}
+.learn-list time{display:block;font-size:13px;letter-spacing:.01em;margin:0 0 4px;color:var(--muted)}
+.article ul,.article ol{padding-left:1.25rem}
+.article li+li{margin-top:.35rem}
+@media (prefers-color-scheme: dark){
+  .article .lede,.article .date,.learn-list p,.learn-list time{color:var(--muted)}
+  .learn-list li{background:var(--sheet);border-color:var(--line)}
+  .article blockquote{background:#24302A;color:var(--graphite)}
 }

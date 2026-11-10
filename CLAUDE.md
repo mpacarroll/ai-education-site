@@ -41,3 +41,7 @@ Durable, repo-specific context lives here and in `.claude/rules/`. Architecture 
 In-flight task state is separate: it lives in `.claude/state/handoff.md`, written by any session that stops mid-task (the injected Coordination rules make this automatic) and injected into the next session by the plugin's SessionStart hook. Durable facts here, current-task state there.
 
 <!-- repo-knowledge: content below this line is preserved by sync-repo.sh -->
+
+## Blog
+
+The public site is static HTML (GitHub Pages, `CNAME` `homeschoolaitutor.com`, `.nojekyll`). Blog posts are Markdown in `posts/` and compiled by `python3 tools/build_blog.py` into `blog/index.html` and `blog/<slug>/index.html`. The same command inserts the Blog nav and footer link and the sitemap URLs. Commit the generated HTML. A catalog publish from the private repo's `tools/publish_site.sh` overwrites nav edits, so re-run the blog build afterward and keep `posts/`, `blog/`, and `tools/build_blog.py`.
