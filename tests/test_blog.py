@@ -15,8 +15,11 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_blog  # noqa: E402
 
 POST = ROOT / "blog" / "homeschool-psat-prep-12-week-plan" / "index.html"
+SEWING = ROOT / "blog" / "homeschool-sewing-curriculum-guide" / "index.html"
 SOURCE = ROOT / "posts" / "homeschool-psat-prep-12-week-plan.md"
 ETSY = "https://www.etsy.com/listing/4587938543"
+SEWING_LISTING = "https://www.etsy.com/listing/4588033952"
+SHOP = "https://www.etsy.com/shop/HomeschoolAITutor"
 
 
 class BlogBuildTest(unittest.TestCase):
@@ -25,19 +28,21 @@ class BlogBuildTest(unittest.TestCase):
         build_blog.build()
 
     def test_word_count_and_voice(self):
-        post = build_blog.load_posts()[0]
-        count = build_blog.word_count(post["body"])
-        self.assertGreaterEqual(count, 1200)
-        self.assertLessEqual(count, 1600)
-        self.assertNotIn("!", post["body"])
-        self.assertNotIn("\u2014", post["body"])
-        self.assertNotIn("\u2013", post["body"])
-        visible = re.sub(r"\[[^\]]*\]\([^)]*\)", " ", post["body"])
-        visible = re.sub(r"<[^>]+>", " ", visible)
-        self.assertNotRegex(visible, r"diagnostic")
-        self.assertLessEqual(len(post["description"]), 170)
-        self.assertGreaterEqual(len(post["description"]), 50)
-        self.assertEqual(post["slug"], "homeschool-psat-prep-12-week-plan")
+        posts = {post["slug"]: post for post in build_blog.load_posts()}
+        self.assertIn("homeschool-psat-prep-12-week-plan", posts)
+        self.assertIn("homeschool-sewing-curriculum-guide", posts)
+        for post in posts.values():
+            count = build_blog.word_count(post["body"])
+            self.assertGreaterEqual(count, 1200, post["slug"])
+            self.assertLessEqual(count, 1600, post["slug"])
+            self.assertNotIn("!", post["body"])
+            self.assertNotIn("\u2014", post["body"])
+            self.assertNotIn("\u2013", post["body"])
+            visible = re.sub(r"\[[^\]]*\]\([^)]*\)", " ", post["body"])
+            visible = re.sub(r"<[^>]+>", " ", visible)
+            self.assertNotRegex(visible, r"diagnostic")
+            self.assertLessEqual(len(post["description"]), 170, post["slug"])
+            self.assertGreaterEqual(len(post["description"]), 50, post["slug"])
 
     def test_pages_and_seo(self):
         index = (ROOT / "blog" / "index.html").read_text(encoding="utf-8")
@@ -62,6 +67,26 @@ class BlogBuildTest(unittest.TestCase):
         self.assertIn("publisher", article)
         self.assertIn("<table>", post)
         self.assertIn("<time datetime=\"2026-11-10\">", post)
+        sewing = SEWING.read_text(encoding="utf-8")
+        self.assertIn("homeschool-sewing-curriculum-guide/", index)
+        self.assertIn(
+            'rel="canonical" href="https://homeschoolaitutor.com/blog/homeschool-sewing-curriculum-guide/"',
+            sewing,
+        )
+        self.assertEqual(sewing.count(SEWING_LISTING), 2)
+        self.assertEqual(sewing.count(SHOP), 1)
+        self.assertIn("/diagnostics/sewing-and-mending-placement-diagnostic.html", sewing)
+        self.assertIn("sewing placement check", sewing)
+        self.assertIn("<time datetime=\"2026-11-12\">", sewing)
+        sewing_ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', sewing).group(1)
+        sewing_article = next(
+            node for node in json.loads(sewing_ld)["@graph"] if node["@type"] == "Article"
+        )
+        self.assertEqual(
+            sewing_article["headline"],
+            "Homeschool Sewing Curriculum: Teaching Kids to Sew at Home",
+        )
+        self.assertEqual(sewing_article["datePublished"], "2026-11-12")
 
     def test_sitemap_and_nav(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -70,7 +95,11 @@ class BlogBuildTest(unittest.TestCase):
             sitemap.count("<loc>https://homeschoolaitutor.com/blog/homeschool-psat-prep-12-week-plan/</loc>"),
             1,
         )
-        self.assertEqual(sitemap.count("<loc>https://homeschoolaitutor.com/blog/"), 2)
+        self.assertEqual(
+            sitemap.count("<loc>https://homeschoolaitutor.com/blog/homeschool-sewing-curriculum-guide/</loc>"),
+            1,
+        )
+        self.assertEqual(sitemap.count("<loc>https://homeschoolaitutor.com/blog/"), 3)
         home = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn('href="blog/index.html">Blog</a>', home)
         nested = (ROOT / "packs" / "psat-prep-12wk.html").read_text(encoding="utf-8")
@@ -109,7 +138,7 @@ class BlogBuildTest(unittest.TestCase):
         build_blog.build()
         self.assertEqual(POST.read_text(encoding="utf-8"), before)
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertEqual(sitemap.count("/blog/"), 2)
+        self.assertEqual(sitemap.count("/blog/"), 3)
 
 
 if __name__ == "__main__":

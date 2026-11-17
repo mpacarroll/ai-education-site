@@ -372,11 +372,12 @@ def index_ld(posts: list[dict]) -> str:
 INDEX_TITLE = "Blog: articles from Homeschool AI Tutor"
 INDEX_DESCRIPTION = (
     "Articles for homeschool families, including a 12-week study plan "
-    "for the digital PSAT/NMSQT."
+    "for the digital PSAT/NMSQT and a homeschool sewing curriculum."
 )
 INDEX_LEDE = (
     "Practical notes for homeschool families. New pieces show up here "
-    "as articles, starting with a 12-week plan for the digital PSAT."
+    "as articles, including a 12-week plan for the digital PSAT and a "
+    "guide to teaching sewing at home."
 )
 
 
