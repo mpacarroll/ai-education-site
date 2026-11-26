@@ -99,7 +99,11 @@ class BlogBuildTest(unittest.TestCase):
             sitemap.count("<loc>https://homeschoolaitutor.com/blog/homeschool-sewing-curriculum-guide/</loc>"),
             1,
         )
-        self.assertEqual(sitemap.count("<loc>https://homeschoolaitutor.com/blog/"), 3)
+        self.assertEqual(
+            sitemap.count("<loc>https://homeschoolaitutor.com/blog/how-to-let-your-homeschooler-use-chatgpt/</loc>"),
+            1,
+        )
+        self.assertEqual(sitemap.count("<loc>https://homeschoolaitutor.com/blog/"), 4)
         home = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn('href="blog/index.html">Blog</a>', home)
         nested = (ROOT / "packs" / "psat-prep-12wk.html").read_text(encoding="utf-8")
@@ -138,7 +142,16 @@ class BlogBuildTest(unittest.TestCase):
         build_blog.build()
         self.assertEqual(POST.read_text(encoding="utf-8"), before)
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertEqual(sitemap.count("/blog/"), 3)
+        self.assertEqual(sitemap.count("/blog/"), 4)
+
+    def test_chatgpt_rules_post_links(self):
+        page = (ROOT / "blog" / "how-to-let-your-homeschooler-use-chatgpt" / "index.html").read_text(
+            encoding="utf-8"
+        )
+        for listing in ("4584501192", "4584638124", "4584491357", "4584484645"):
+            self.assertIn(f"https://www.etsy.com/listing/{listing}", page)
+        self.assertIn("/diagnostics/math-placement-diagnostic.html", page)
+        self.assertIn("Rules for you as my tutor", page)
 
 
 if __name__ == "__main__":
