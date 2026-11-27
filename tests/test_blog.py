@@ -48,6 +48,7 @@ class BlogBuildTest(unittest.TestCase):
         index = (ROOT / "blog" / "index.html").read_text(encoding="utf-8")
         post = POST.read_text(encoding="utf-8")
         self.assertIn("<h1>Blog</h1>", index)
+        self.assertIn('<a href="../printables/index.html">Printables</a>', index)
         self.assertIn("homeschool-psat-prep-12-week-plan/", index)
         self.assertIn('rel="canonical" href="https://homeschoolaitutor.com/blog/"', index)
         self.assertIn(
