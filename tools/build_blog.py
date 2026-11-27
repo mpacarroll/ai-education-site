@@ -427,6 +427,7 @@ def chrome(page: Path, title: str, description: str, canonical: str, ld: str, ma
 <a href="{rel_to(page, ROOT / "placement-checks.html")}">Free placement checks</a>
 <a href="{rel_to(page, ROOT / "learn" / "index.html")}">Learn</a>
 <a href="{blog_href}"{current}>Blog</a>
+<a href="{rel_to(page, ROOT / "printables" / "index.html")}">Printables</a>
 <a href="{rel_to(page, ROOT / "start-here.html")}">Never used AI? Start here</a></nav></div></header>
 <main>
 {main}
