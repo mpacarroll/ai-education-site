@@ -114,6 +114,11 @@ class BlogBuildTest(unittest.TestCase):
             if ">Blog</a>" not in path.read_text(encoding="utf-8")
         ]
         self.assertEqual(missing, [])
+        # Blog pages carry the same Printables link as the catalog's nav, or a
+        # rebuild drops it and the generated-pages check goes red (hq#1156).
+        for post in (ROOT / "blog").rglob("index.html"):
+            text = post.read_text(encoding="utf-8")
+            self.assertIn('printables/index.html">Printables</a>', text, str(post.relative_to(ROOT)))
 
     def test_markdown_and_drafts(self):
         html_out = build_blog.render_markdown(
